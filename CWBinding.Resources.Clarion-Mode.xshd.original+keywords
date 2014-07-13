@@ -1,48 +1,38 @@
 <?xml version="1.0"?>
 <SyntaxDefinition name="Clarion" extensions=".clw;.inc;.int;.trn;.equ">
     <Environment>
-        <Custom name="Label" bold="true" italic="false" color="#FF719A07"/>
-        <Custom name="OmittedCode" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5"/>
-        <Custom name="GeneratedCode" bold="false" italic="false" color="#FF657B84" bgcolor="#FFEEE8D5"/>
-        <Default bold="false" italic="false" color="#FF657B84" bgcolor="#FFFDF6E3"/>
-        <Selection bold="false" italic="false" color="#FF657B83" bgcolor="#FF93A1A1"/>        
-        <VRuler bold="false" italic="false" color="#6897BB" />
-        <LineNumbers bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEAFDE3" />
-        <FoldLine bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" />
-        <FoldMarker bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" />
-        <SelectedFoldLine bold="false" italic="false" color="#FF657B83" />
-        <EOLMarkers bold="false" italic="false" color="#FF657B83" />
-        <SpaceMarkers bold="false" italic="false" color="#FF657B83" />
-	<TabMarkers bold="false" italic="false" color="#FF657B83" />        
+        <Custom name="Label" bold="true" italic="false" color="Red"/>
+        <Custom name="OmittedCode" bold="false" italic="false" color="Black" bgcolor="WhiteSmoke"/>
+        <Custom name="GeneratedCode" bold="false" italic="false" color="Black" bgcolor="#E9E9E9"/>
     </Environment>
     <Properties>
         <Property name="LineComment" value="!"/>
     </Properties>
-    <Digits name="Digits" bold="true" italic="false" color="#FF2AA198"/>
+    <Digits name="Digits" bold="true" italic="false" color="Orchid"/>
     <RuleSets>
         <RuleSet ignorecase="true" noescapesequences="true">
             <Delimiters>&amp;&lt;&gt;~!@%^*()-+=|\#/{}[];"' ,	.?</Delimiters>
-            <Span name="Region" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" stopateol="true" noescapesequences="true">
+            <Span name="Region" bold="false" italic="false" color="Gray" stopateol="true" noescapesequences="true">
                 <Begin>!region</Begin>
             </Span>
-            <Span name="EndRegion" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" stopateol="true" noescapesequences="true">
+            <Span name="EndRegion" bold="false" italic="false" color="Gray" stopateol="true" noescapesequences="true">
                 <Begin>!endregion</Begin>
             </Span>
-            <Span name="DocLineComment" rule="DocCommentSet" bold="false" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+            <Span name="DocLineComment" rule="DocCommentSet" bold="false" italic="false" color="Gray" stopateol="true" noescapesequences="true">
                 <Begin bold="false" italic="false" color="Gray">!!!</Begin>
             </Span>
-            <Span name="LineComment" bold="false" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+            <Span name="LineComment" bold="false" italic="false" color="Green" stopateol="true" noescapesequences="true">
                 <Begin>!@!!!@</Begin>
             </Span>
-            <Span name="StringOrChar" bold="true" italic="false" color="#FF2AA198" stopateol="true" noescapesequences="true">
+            <Span name="StringOrChar" bold="true" italic="false" color="Gray" stopateol="true" noescapesequences="true">
                 <Begin>'</Begin>
                 <End>'</End>
             </Span>
-            <Span name="Picture" bold="true" italic="false" color="#FF2AA198" stopateol="true" noescapesequences="true">
+            <Span name="Picture" bold="true" italic="false" color="Gray" stopateol="true" noescapesequences="true">
                 <Begin>@@</Begin>
             </Span>
-            <MarkPrevious bold="true" italic="false" color="#FF657B83">(</MarkPrevious>
-            <KeyWords name="Punctuation" bold="false" italic="false" color="#FF719A07">
+            <MarkPrevious bold="true" italic="false" color="MidnightBlue">(</MarkPrevious>
+            <KeyWords name="Punctuation" bold="false" italic="false" color="DarkGreen">
                 <Key word="?"/>
                 <Key word=","/>
                 <Key word="."/>
@@ -68,13 +58,13 @@
                 <Key word="|"/>
                 <Key word="&amp;"/>
             </KeyWords>
-            <KeyWords name="LogicOperators" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="LogicOperators" bold="true" italic="false" color="Blue">
                 <Key word="AND"/>
                 <Key word="OR"/>
                 <Key word="XOR"/>
                 <Key word="NOT"/>
             </KeyWords>
-            <KeyWords name="HardReservedKeywords" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="HardReservedKeywords" bold="true" italic="false" color="Blue">
                 <Key word="ACCEPT"/>
                 <Key word="BREAK"/>
                 <Key word="BY"/>
@@ -107,7 +97,7 @@
                 <Key word="UNTIL"/>
                 <Key word="WHILE"/>
             </KeyWords>
-            <KeyWords name="SoftReservedKeywords" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="SoftReservedKeywords" bold="true" italic="false" color="Blue">
                 <Key word="APPLICATION"/>
                 <Key word="CLASS"/>
                 <Key word="CODE"/>
@@ -142,7 +132,7 @@
                 <Key word="PROPERTY"/>
                 <Key word="INDEXER"/>
             </KeyWords>
-            <KeyWords name="Directives" bold="true" italic="false" color="#FFCB4B16">
+            <KeyWords name="Directives" bold="true" italic="false" color="#4682b4">
                 <Key word="ASSERT"/>
                 <Key word="BEGIN"/>
                 <Key word="COMPILE"/>
@@ -159,7 +149,7 @@
                 <!--<Key word = "SUBTITLE" />-->
                 <!--<Key word = "TITLE" />-->
             </KeyWords>
-            <KeyWords name="BaseTypes" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="BaseTypes" bold="true" italic="false" color="#9370db">
                 <Key word="ANY"/>
                 <Key word="ASTRING"/>
                 <Key word="BFLOAT4"/>
@@ -187,7 +177,7 @@
                 <Key word="USHORT"/>
                 <Key word="VARIANT"/>
             </KeyWords>
-            <KeyWords name="SpecialTypes" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="SpecialTypes" bold="true" italic="false" color="#9370db">
                 <Key word="APPLICATION"/>
                 <Key word="BUTTON"/>
                 <Key word="CHECK"/>
@@ -230,7 +220,7 @@
                 <Key word="VBX"/>
                 <Key word="VIEW"/>
             </KeyWords>
-            <KeyWords name="Attributes" bold="false" italic="false" color="#FF719A07">
+            <KeyWords name="Attributes" bold="false" italic="false" color="Blue">
                 <Key word="ABOVE"/>
                 <Key word="ABSOLUTE"/>
                 <Key word="ALONE"/>
@@ -394,7 +384,7 @@
                 <Key word="SYSTEM"/>
                 <Key word="TYPE"/>
             </KeyWords>
-            <KeyWords name="Builtins" bold="true" italic="false" color="#FF719A07">
+            <KeyWords name="Builtins" bold="true" italic="false" color="#00bfff">
                 <Key word="NULL"/>
                 <Key word="TRUE"/>
                 <Key word="FALSE"/>
@@ -2305,7 +2295,7 @@
         </RuleSet>
         <RuleSet name="XmlDocSet" ignorecase="true" noescapesequences="true">
             <Delimiters>&amp;&lt;&gt;~!@%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
-            <Span name="String" bold="true" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+            <Span name="String" bold="true" italic="false" color="Silver" stopateol="true" noescapesequences="true">
                 <Begin>"</Begin>
                 <End>"</End>
             </Span>
