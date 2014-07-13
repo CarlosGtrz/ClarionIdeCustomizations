@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Clarion" extensions=".clw;.inc;.int;.trn;.equ">
+    <Environment>
+        <Custom name="Label" bold="true" italic="false" color="#FF719A07"/>
+        <Custom name="OmittedCode" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5"/>
+        <Custom name="GeneratedCode" bold="false" italic="false" color="#FF657B84" bgcolor="#FFEEE8D5"/>
+        <Default bold="false" italic="false" color="#FF657B84" bgcolor="#FFFDF6E3"/>
+        <Selection bold="false" italic="false" color="#FF657B83" bgcolor="#FF93A1A1"/>        
+        <VRuler bold="false" italic="false" color="#6897BB" />
+        <InvalidLines bold="false" italic="false" color="#FF268BD2" />
+        <CaretMarker bold="false" italic="false" color="#FF268BD2" />
+        <LineNumbers bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEAFDE3" />
+        <FoldLine bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" />
+        <FoldMarker bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" />
+        <SelectedFoldLine bold="false" italic="false" color="#FF657B83" />
+        <EOLMarkers bold="false" italic="false" color="#FF657B83" />
+        <SpaceMarkers bold="false" italic="false" color="#FF657B83" />
+	<TabMarkers bold="false" italic="false" color="#FF657B83" />
+        
+    </Environment>
+    <Properties>
+        <Property name="LineComment" value="!"/>
+    </Properties>
+    <Digits name="Digits" bold="true" italic="false" color="#FF2AA198"/>
+    <RuleSets>
+        <RuleSet ignorecase="true" noescapesequences="true">
+            <Delimiters>&amp;&lt;&gt;~!@%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
+            <Span name="Region" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" stopateol="true" noescapesequences="true">
+                <Begin>!region</Begin>
+            </Span>
+            <Span name="EndRegion" bold="false" italic="false" color="#FF93A1A1" bgcolor="#FFEEE8D5" stopateol="true" noescapesequences="true">
+                <Begin>!endregion</Begin>
+            </Span>
+            <Span name="DocLineComment" rule="DocCommentSet" bold="false" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+                <Begin bold="false" italic="false" color="Gray">!!!</Begin>
+            </Span>
+            <Span name="LineComment" bold="false" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+                <Begin>!@!!!@</Begin>
+            </Span>
+            <Span name="StringOrChar" bold="true" italic="false" color="#FF2AA198" stopateol="true" noescapesequences="true">
+                <Begin>'</Begin>
+                <End>'</End>
+            </Span>
+            <Span name="Picture" bold="true" italic="false" color="#FF2AA198" stopateol="true" noescapesequences="true">
+                <Begin>@@</Begin>
+            </Span>
+            <MarkPrevious bold="true" italic="false" color="#FF657B83">(</MarkPrevious>
+            <KeyWords name="Punctuation" bold="false" italic="false" color="#FF719A07">
+                <Key word="?"/>
+                <Key word=","/>
+                <Key word="."/>
+                <Key word=";"/>
+                <Key word=":"/>
+                <Key word="("/>
+                <Key word=")"/>
+                <Key word="["/>
+                <Key word="]"/>
+                <Key word="{"/>
+                <Key word="}"/>
+                <Key word="+"/>
+                <Key word="-"/>
+                <Key word="/"/>
+                <Key word="%"/>
+                <Key word="*"/>
+                <Key word="&lt;"/>
+                <Key word="&gt;"/>
+                <Key word="^"/>
+                <Key word="="/>
+                <Key word="~"/>
+                <Key word="!"/>
+                <Key word="|"/>
+                <Key word="&amp;"/>
+            </KeyWords>
+            <KeyWords name="LogicOperators" bold="true" italic="false" color="#FF719A07">
+                <Key word="AND"/>
+                <Key word="OR"/>
+                <Key word="XOR"/>
+                <Key word="NOT"/>
+            </KeyWords>
+            <KeyWords name="HardReservedKeywords" bold="true" italic="false" color="#FF719A07">
+                <Key word="ACCEPT"/>
+                <Key word="BREAK"/>
+                <Key word="BY"/>
+                <Key word="CASE"/>
+                <Key word="CHOOSE"/>
+                <Key word="CYCLE"/>
+                <Key word="DO"/>
+                <Key word="ELSE"/>
+                <Key word="ELSIF"/>
+                <Key word="END"/>
+                <Key word="EXECUTE"/>
+                <Key word="EXIT"/>
+                <Key word="FUNCTION"/>
+                <Key word="GOTO"/>
+                <Key word="IF"/>
+                <Key word="LOOP"/>
+                <Key word="MEMBER"/>
+                <Key word="NEW"/>
+                <Key word="OF"/>
+                <Key word="OROF"/>
+                <Key word="PARENT"/>
+                <Key word="PROCEDURE"/>
+                <Key word="PROGRAM"/>
+                <Key word="RETURN"/>
+                <Key word="ROUTINE"/>
+                <Key word="SELF"/>
+                <Key word="THEN"/>
+                <Key word="TIMES"/>
+                <Key word="TO"/>
+                <Key word="UNTIL"/>
+                <Key word="WHILE"/>
+            </KeyWords>
+            <KeyWords name="SoftReservedKeywords" bold="true" italic="false" color="#FF719A07">
+                <Key word="APPLICATION"/>
+                <Key word="CLASS"/>
+                <Key word="CODE"/>
+                <Key word="DATA"/>
+                <Key word="DETAIL"/>
+                <Key word="ENUM"/>
+                <Key word="FILE"/>
+                <Key word="FOOTER"/>
+                <Key word="FORM"/>
+                <Key word="GROUP"/>
+                <Key word="HEADER"/>
+                <Key word="INLINE"/>
+                <Key word="ITEM"/>
+                <Key word="JOIN"/>
+                <Key word="MAP"/>
+                <Key word="MENU"/>
+                <Key word="MENUBAR"/>
+                <Key word="MODULE"/>
+                <Key word="OLECONTROL"/>
+                <Key word="OPTION"/>
+                <Key word="QUEUE"/>
+                <Key word="RECORD"/>
+                <Key word="REPORT"/>
+                <Key word="ROW"/>
+                <Key word="SHEET"/>
+                <Key word="STRUCT"/>
+                <Key word="TAB"/>
+                <Key word="TABLE"/>
+                <Key word="TOOLBAR"/>
+                <Key word="VIEW"/>
+                <Key word="WINDOW"/>
+                <Key word="PROPERTY"/>
+                <Key word="INDEXER"/>
+            </KeyWords>
+            <KeyWords name="Directives" bold="true" italic="false" color="#FFCB4B16">
+                <Key word="ASSERT"/>
+                <Key word="BEGIN"/>
+                <Key word="COMPILE"/>
+                <!--<Key word = "EJECT" />-->
+                <!--<Key word = "EMBED" />-->
+                <!--<Key word = "ENDEMBED" />-->
+                <Key word="EQUATE"/>
+                <Key word="INCLUDE"/>
+                <Key word="ITEMIZE"/>
+                <Key word="OMIT"/>
+                <Key word="ONCE"/>
+                <Key word="SECTION"/>
+                <Key word="SIZE"/>
+                <!--<Key word = "SUBTITLE" />-->
+                <!--<Key word = "TITLE" />-->
+            </KeyWords>
+            <KeyWords name="BaseTypes" bold="true" italic="false" color="#FF719A07">
+                <Key word="ANY"/>
+                <Key word="ASTRING"/>
+                <Key word="BFLOAT4"/>
+                <Key word="BFLOAT8"/>
+                <Key word="BLOB"/>
+                <Key word="BOOL"/>
+                <Key word="BSTRING"/>
+                <Key word="BYTE"/>
+                <Key word="CSTRING"/>
+                <Key word="DATE"/>
+                <Key word="DECIMAL"/>
+                <Key word="DOUBLE"/>
+                <Key word="FLOAT4"/>
+                <Key word="LONG"/>
+                <Key word="PDECIMAL"/>
+                <Key word="PSTRING"/>
+                <Key word="REAL"/>
+                <Key word="SHORT"/>
+                <Key word="SIGNED"/>
+                <Key word="SREAL"/>
+                <Key word="STRING"/>
+                <Key word="TIME"/>
+                <Key word="ULONG"/>
+                <Key word="UNSIGNED"/>
+                <Key word="USHORT"/>
+                <Key word="VARIANT"/>
+            </KeyWords>
+            <KeyWords name="SpecialTypes" bold="true" italic="false" color="#FF719A07">
+                <Key word="APPLICATION"/>
+                <Key word="BUTTON"/>
+                <Key word="CHECK"/>
+                <Key word="CLASS"/>
+                <Key word="COMBO"/>
+                <Key word="CUSTOM"/>
+                <Key word="DETAIL"/>
+                <Key word="ELLIPSE"/>
+                <Key word="ENTRY"/>
+                <Key word="FILE"/>
+                <Key word="FOOTER"/>
+                <Key word="FORM"/>
+                <Key word="GROUP"/>
+                <Key word="HEADER"/>
+                <Key word="IMAGE"/>
+                <Key word="INTERFACE"/>
+                <Key word="ITEM"/>
+                <Key word="KEY"/>
+                <Key word="LINE"/>
+                <Key word="LIST"/>
+                <Key word="MENU"/>
+                <Key word="MENUBAR"/>
+                <Key word="OLE"/>
+                <Key word="OPTION"/>
+                <Key word="PANEL"/>
+                <Key word="PROGRESS"/>
+                <Key word="PROJECT"/>
+                <Key word="PROMPT"/>
+                <Key word="QUEUE"/>
+                <Key word="RADIO"/>
+                <Key word="REGION"/>
+                <Key word="REPORT"/>
+                <Key word="SEPARATOR"/>
+                <Key word="SHEET"/>
+                <Key word="SPIN"/>
+                <Key word="TAB"/>
+                <Key word="TABLE"/>
+                <Key word="TEXT"/>
+                <Key word="TOOLBAR"/>
+                <Key word="VBX"/>
+                <Key word="VIEW"/>
+            </KeyWords>
+            <KeyWords name="Attributes" bold="false" italic="false" color="#FF719A07">
+                <Key word="ABOVE"/>
+                <Key word="ABSOLUTE"/>
+                <Key word="ALONE"/>
+                <Key word="ALRT"/>
+                <Key word="ANGLE"/>
+                <Key word="AT"/>
+                <Key word="AUTO"/>
+                <Key word="AUTOSIZE"/>
+                <Key word="AVE"/>
+                <Key word="BELOW"/>
+                <Key word="BEVEL"/>
+                <Key word="BINARY"/>
+                <Key word="BINDABLE"/>
+                <Key word="BITMAP"/>
+                <Key word="BOXED"/>
+                <Key word="C"/>
+                <Key word="CAP"/>
+                <Key word="CENTER"/>
+                <Key word="CENTERED"/>
+                <Key word="CNT"/>
+                <Key word="COLOR"/>
+                <Key word="COLUMN"/>
+                <Key word="COM"/>
+                <Key word="COMPATIBILITY"/>
+                <Key word="CONST"/>
+                <Key word="CURSOR"/>
+                <Key word="DEFAULT"/>
+                <Key word="DELAY"/>
+                <Key word="DERIVED"/>
+                <Key word="DIM"/>
+                <Key word="DLL"/>
+                <Key word="DOCUMENT"/>
+                <Key word="DOCK"/>
+                <Key word="DOCKED"/>
+                <Key word="DOWN"/>
+                <Key word="DRAGID"/>
+                <Key word="DRIVER"/>
+                <Key word="DROP"/>
+                <Key word="DROPID"/>
+                <Key word="DUP"/>
+                <Key word="ENCRYPT"/>
+                <Key word="EXPAND"/>
+                <Key word="EXTEND"/>
+                <Key word="EXTERNAL"/>
+                <Key word="FILL"/>
+                <Key word="FILTER"/>
+                <Key word="FIRST"/>
+                <Key word="FIX"/>
+                <Key word="FIXED"/>
+                <Key word="FLAT"/>
+                <Key word="FONT"/>
+                <Key word="FROM"/>
+                <Key word="FULL"/>
+                <Key word="GLOBALCLASS"/>
+                <Key word="GRAY"/>
+                <Key word="GRID"/>
+                <Key word="HIDE"/>
+                <Key word="HLP"/>
+                <Key word="HSCROLL"/>
+                <Key word="HVSCROLL"/>
+                <Key word="ICON"/>
+                <Key word="ICONIZE"/>
+                <Key word="IMM"/>
+                <Key word="IMPLEMENTS"/>
+                <Key word="INNER"/>
+                <Key word="INS"/>
+                <Key word="LANDSCAPE"/>
+                <Key word="LAST"/>
+                <Key word="LATE"/>
+                <Key word="LAYOUT"/>
+                <Key word="LENGTH"/>
+                <Key word="LFT"/>
+                <Key word="LINEWIDTH"/>
+                <Key word="LINK"/>
+                <Key word="LOCATE"/>
+                <Key word="MARK"/>
+                <Key word="MASK"/>
+                <Key word="MAX"/>
+                <Key word="MAXIMIZE"/>
+                <Key word="MDI"/>
+                <Key word="META"/>
+                <Key word="MIN"/>
+                <Key word="MM"/>
+                <Key word="MODAL"/>
+                <Key word="MSG"/>
+                <Key word="NAME"/>
+                <Key word="NOBAR"/>
+                <Key word="NOCASE"/>
+                <Key word="NOFRAME"/>
+                <Key word="NOMEMO"/>
+                <Key word="NOMERGE"/>
+                <Key word="NOSHEET"/>
+                <Key word="OEM"/>
+                <Key word="OPT"/>
+                <Key word="ORDER"/>
+                <Key word="OUTER"/>
+                <Key word="OVER"/>
+                <Key word="OVR"/>
+                <Key word="OWNER"/>
+                <Key word="PAGE"/>
+                <Key word="PAGEAFTER"/>
+                <Key word="PAGEBEFORE"/>
+                <Key word="PALETTE"/>
+                <Key word="PAPER"/>
+                <Key word="PASCAL"/>
+                <Key word="PASSWORD"/>
+                <Key word="POINTS"/>
+                <Key word="PRE"/>
+                <Key word="PREVIEW"/>
+                <Key word="PRIMARY"/>
+                <Key word="PRIVATE"/>
+                <Key word="PROC"/>
+                <Key word="PROTECTED"/>
+                <Key word="RANGE"/>
+                <Key word="RAW"/>
+                <Key word="READONLY"/>
+                <Key word="RECLAIM"/>
+                <Key word="REPEAT"/>
+                <Key word="REPLACE"/>
+                <Key word="REQ"/>
+                <Key word="RESIZE"/>
+                <Key word="SCROLL"/>
+                <Key word="SINGLE"/>
+                <Key word="SMOOTH"/>
+                <Key word="SPREAD"/>
+                <Key word="STATIC"/>
+                <Key word="STD"/>
+                <Key word="STEP"/>
+                <Key word="STRETCH"/>
+                <Key word="SUM"/>
+                <Key word="SUPPRESS"/>
+                <Key word="TALLY"/>
+                <Key word="TARGET"/>
+                <Key word="THOUS"/>
+                <Key word="TILED"/>
+                <Key word="TIMER"/>
+                <Key word="TIP"/>
+                <Key word="TOGETHER"/>
+                <Key word="TOOLBOX"/>
+                <Key word="TRN"/>
+                <Key word="UP"/>
+                <Key word="UPR"/>
+                <Key word="USE"/>
+                <Key word="VALUE"/>
+                <Key word="VERTICAL"/>
+                <Key word="VCR"/>
+                <Key word="VIRTUAL"/>
+                <Key word="VSCROLL"/>
+                <Key word="WALLPAPER"/>
+                <Key word="WIDTH"/>
+                <Key word="WITHNEXT"/>
+                <Key word="WITHPRIOR"/>
+                <Key word="WIZARD"/>
+                <Key word="WRAP"/>
+                <Key word="ZOOM"/>
+                <Key word="CHECK"/>
+                <Key word="DOUBLE"/>
+                <Key word="SEPARATOR"/>
+                <Key word="PAGENO"/>
+                <Key word="RTF"/>
+                <Key word="SYSTEM"/>
+                <Key word="TYPE"/>
+            </KeyWords>
+            <KeyWords name="Builtins" bold="true" italic="false" color="#FF719A07">
+                <Key word="NULL"/>
+                <Key word="TRUE"/>
+                <Key word="FALSE"/>
+            </KeyWords>
+        </RuleSet>
+        <RuleSet name="DocCommentSet" ignorecase="true" noescapesequences="true">
+            <Delimiters>&amp;&lt;&gt;~!@%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
+            <Span name="XmlTag" rule="XmlDocSet" bold="false" italic="false" color="Gray" stopateol="true" noescapesequences="true">
+                <Begin>&lt;</Begin>
+                <End>&gt;</End>
+            </Span>
+            <KeyWords name="ErrorWords" bold="true" italic="false" color="Red">
+                <Key word="TODO"/>
+                <Key word="FIXME"/>
+            </KeyWords>
+            <KeyWords name="WarningWords" bold="true" italic="false" color="#EEE0E000">
+                <Key word="HACK"/>
+                <Key word="UNDONE"/>
+            </KeyWords>
+        </RuleSet>
+        <RuleSet name="XmlDocSet" ignorecase="true" noescapesequences="true">
+            <Delimiters>&amp;&lt;&gt;~!@%^*()-+=|\#/{}[]:;"' ,	.?</Delimiters>
+            <Span name="String" bold="true" italic="false" color="#FF93A1A1" stopateol="true" noescapesequences="true">
+                <Begin>"</Begin>
+                <End>"</End>
+            </Span>
+            <KeyWords name="Punctuation" bold="true" italic="false" color="Gray">
+                <Key word="/"/>
+                <Key word="|"/>
+                <Key word="="/>
+            </KeyWords>
+            <KeyWords name="SpecialComment" bold="true" italic="false" color="Gray">
+                <Key word="c"/>
+                <Key word="code"/>
+                <Key word="example"/>
+                <Key word="exception"/>
+                <Key word="list"/>
+                <Key word="para"/>
+                <Key word="param"/>
+                <Key word="paramref"/>
+                <Key word="permission"/>
+                <Key word="remarks"/>
+                <Key word="returns"/>
+                <Key word="see"/>
+                <Key word="seealso"/>
+                <Key word="summary"/>
+                <Key word="value"/>
+                <Key word="type"/>
+                <Key word="name"/>
+                <Key word="cref"/>
+                <Key word="item"/>
+                <Key word="term"/>
+                <Key word="description"/>
+                <Key word="listheader"/>
+            </KeyWords>
+        </RuleSet>
+    </RuleSets>
+</SyntaxDefinition>
