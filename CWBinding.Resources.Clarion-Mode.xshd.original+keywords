@@ -251,6 +251,7 @@
                 <Key word="DELAY"/>
                 <Key word="DERIVED"/>
                 <Key word="DIM"/>
+                <Key word="DISPOSE"/>
                 <Key word="DLL"/>
                 <Key word="DOCUMENT"/>
                 <Key word="DOCK"/>
@@ -543,6 +544,7 @@
                 <Key word="MOUSEY"/>
                 <Key word="NAME"/>
                 <Key word="NEXT"/>
+                <Key word="NEW"/>
                 <Key word="NOMEMO"/>
                 <Key word="NOTIFICATION"/>
                 <Key word="NOTIFY"/>
