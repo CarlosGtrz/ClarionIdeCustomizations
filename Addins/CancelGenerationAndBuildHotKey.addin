@@ -1,0 +1,19 @@
+<AddIn name        = "Cancel Generation and Build Hotkey"
+       author      = "Carlos Gutierrez carlosg@sca.com.mx"
+       url         = "http://sca.com.mx/clarion"
+       description = "Press Control-H (Halt) to cancel Generation and Build">
+
+	<Manifest>
+		<Identity name = "CarlosG.CancelGenerationAndBuildHotkey"/>
+	</Manifest>
+	<Path name = "/SharpDevelop/Workbench/MainMenu/Build">
+		<Condition name = "IsGeneratingOrBuilding" action="Disable">
+			<MenuItem id       = "CancelGenerateAndBuildMenuItem"
+			          label    = "${res:Clarion.Generator.Pad.Buttons.CancelGenerateAndBuild}"
+			          shortcut = "Control|H"
+			          insertbefore   = "Build"
+			          icon    = "Icons.24x24.CancelGenerateAndBuild"
+			          class   = "SoftVelocity.Generator.Commands.CancelGenerationAndBuild"/>	
+		</Condition>					  
+	</Path>
+</AddIn>
