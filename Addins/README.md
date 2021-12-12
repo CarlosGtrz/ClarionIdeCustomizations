@@ -1,4 +1,4 @@
-###Press Control-H (Halt) to cancel Generation and Build
+### Press Control-H (Halt) to cancel Generation and Build
 
 Download file `CancelGenerationAndBuildHotKey.addin` and copy to folder:
 
