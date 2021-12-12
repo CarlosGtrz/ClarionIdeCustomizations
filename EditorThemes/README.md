@@ -1,4 +1,4 @@
-###Highlighting of all Keywords, PROPerties, EVENTs and KeyCodes
+### Highlighting of all Keywords, PROPerties, EVENTs and KeyCodes
 
 Download file `CWBinding.Resources.Clarion-Mode.xshd.original+keywords`, rename it to `CWBinding.Resources.Clarion-Mode.xshd` and copy to folder:
 
@@ -12,7 +12,7 @@ If you are using the command line parameter `/ConfigDir=X:\Some\folder` to start
     X:\Some\folder\modes\
 ```
 
-###Solarized Light color scheme
+### Solarized Light color scheme
 
 Download file `CWBinding.Resources.Clarion-Mode.xshd` and copy to folder:
 
